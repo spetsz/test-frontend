@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from 'react'
 import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client'
-import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import {HashRouter, Routes, Route } from 'react-router-dom'
 import {Ctx} from './Context'
 import reducer from './Reducer/Reducer'
 import ACTIONS from './Reducer/Actions'
@@ -53,7 +53,7 @@ const App = () => {
   return (
 
     <Ctx.Provider value={{globalState, dispatch}} >
-      <BrowserRouter>
+      <HashRouter>
         <ApolloProvider client={client}>
           <Navbar />
           <Routes>
@@ -66,7 +66,7 @@ const App = () => {
 
           </Routes>
         </ApolloProvider>
-      </BrowserRouter>
+      </HashRouter>
     </Ctx.Provider>
 
     
