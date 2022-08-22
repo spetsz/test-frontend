@@ -6,6 +6,8 @@ Built with :
 - CSS modules.
 - GraphQL.
 
+### Live demo : https://spetsz.github.io/test-frontend
+
 # Important section
 
 - The navbar
