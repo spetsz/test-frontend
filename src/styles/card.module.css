@@ -1,16 +1,16 @@
 .body{
     width : 100%;
-    min-height: 120px;
+    min-height: 150px;
     background-color: white;
     padding: 10px 5px;
-    border-radius: 7px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
     position: relative;
-    box-shadow: 2px 2px 10px 2px black;
+
 }
 
 .body_loading{
@@ -61,8 +61,12 @@
     border-radius:  50%;
     width: 40px;
     height: 40px;
-    background-color: rgb(214, 214, 68);
     margin-left : 15px;
+    text-align: center;
+    color : white;
+    font-weight: bold;
+    font-size : 14px;
+    padding : 10px;
 }
 
 .footer{

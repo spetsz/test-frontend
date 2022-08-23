@@ -8,6 +8,14 @@ import styles from '../../styles/card.module.css'
 // Importing styles
 const {body, body_loading, dialog, dropdown_exit, dropdown_menu, dropdown_item, btn, btn_save, header, header_right, info, title, small,badge, avatar, footer,footer_right }  = styles
 
+const getRandomColor = ()=>{
+    const letters = '0123456789ABCDEF'
+    let color = '#'
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)]
+    }
+    return color
+  }
 
 const Card = ({client, type, user_name}) => {
 
@@ -22,7 +30,7 @@ const Card = ({client, type, user_name}) => {
     }
 
 
-
+    const [backgroundColor , setBackgroundcolor] = useState(getRandomColor)
     const [dropDown, setDropDown] = useState(false)
     const [loading, setLoading] = useState(false)
     const [inputDisabled, setInputDisabled] = useState(true)
@@ -116,7 +124,7 @@ const Card = ({client, type, user_name}) => {
 
                 </div>
 
-                <img className={avatar}  />
+                <div className={avatar} style={{backgroundColor}} >{first_name.split('')[0]}</div>  
             </div>
         </div>
 
