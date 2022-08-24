@@ -6,7 +6,7 @@ import styles from '../../styles/add_client.module.css'
 import Spinner from '../Spinner'
 
 // Importing styles from css module
-const {form, form_group, form_input, form_group_100w, form_label, btn, btn_action, container, notification_area, notification} = styles
+const {form, form_group, form_input, form_group_100w, form_label, btn, btn_action, container} = styles
 
 
 // Setting intital state
@@ -96,9 +96,7 @@ const Regiter = () => {
   return (
     <div className={container}>
         <button type="button" className={btn_action} onClick={()=>router('/')}>{`< رجوع`}</button>
-        <div className={notification_area}>
-            {err && <div className={notification}>{err}</div>}
-        </div>
+       
         <form className={form}>
             <div className={form_group}>
 

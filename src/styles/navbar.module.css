@@ -4,7 +4,7 @@
     justify-content: space-between;
     width : 100vw;
     background-color: white;
-    min-height: 70px;
+    min-height: 50px;
 }
 
 .container{
@@ -18,7 +18,7 @@
 
 .left{
     display: flex;
-    width : 15%;
+    width : 25%;
     justify-content: space-around;
     align-items: center;
 }
@@ -61,7 +61,7 @@
     }
 
     .left{
-        width: 40%;
+        width: 100%;
     }
     
     .avatar{
@@ -70,3 +70,4 @@
     }
 
 }
+
