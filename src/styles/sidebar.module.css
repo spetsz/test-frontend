@@ -46,3 +46,12 @@
     color: #7d749e
 }
 
+.menu_item_selected{
+    list-style: none;
+    height: 30px;
+    width : 30px;
+    padding : 3px;
+    background-color: #c5c2c2;
+    border-radius: 5px;
+    cursor : pointer;
+}

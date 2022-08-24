@@ -15,11 +15,12 @@ import {HiLogin} from 'react-icons/hi'
 const {SET_USER, SET_QUERY} = ACTIONS
 
 // Importing styles from css module
-const {sidebar, logo, menu, menu_item, menu_icon} = styles
+const {sidebar, logo, menu, menu_item, menu_icon, menu_item_selected} = styles
 
 const Sidebar = () => {
   const {dispatch, globalState} = useContext(Ctx)
-  const {user} = globalState
+  const {user, query} = globalState
+  const selected = query.definitions[0].name.value 
   const router = useNavigate()
 
   const logOut = () =>{
@@ -33,11 +34,11 @@ const Sidebar = () => {
       <img src={logoImg} className={logo} alt="logo" />
       <ul className={menu}>
         
-        <li className={menu_item}>
-          <FiHome onClick={()=>{dispatch({type: SET_QUERY, payload : ALL_CLIENTS}); router('/')}} className={menu_icon} />
+        <li className={selected === "allClients" ? menu_item_selected : menu_item}>
+          <FiHome  onClick={()=>{dispatch({type: SET_QUERY, payload : ALL_CLIENTS}); router('/')}} className={menu_icon} />
         </li>
         
-        <li className={menu_item}>
+        <li className={selected === "allUsers" ? menu_item_selected : menu_item } >
           <MdPersonOutline onClick={()=>{dispatch({type: SET_QUERY, payload : ALL_USERS});router('/')}} className={menu_icon} />
         </li>
 
