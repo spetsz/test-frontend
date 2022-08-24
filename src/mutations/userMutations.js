@@ -11,7 +11,9 @@ const ALL_USERS = gql`
                 city
                 email
                 phone01
+                phone02
                 id
+                address
                 
             },
             user_name,

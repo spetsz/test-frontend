@@ -11,7 +11,9 @@ const ALL_CLIENTS = gql`
                 city
                 email
                 phone01
+                phone02
                 id
+                address
             },
             id
           }

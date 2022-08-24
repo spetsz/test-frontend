@@ -18,6 +18,17 @@
     align-items: flex-end;
 }
 
+.popup{
+    position: absolute;
+    width :100vw;
+    height : 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    top : 0;
+    left : 0;
+    z-index: 10;
+   
+}
+
 .form_group{
     display: flex;
     flex-direction: column-reverse;

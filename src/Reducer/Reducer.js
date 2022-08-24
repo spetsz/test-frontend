@@ -12,6 +12,7 @@ const reducer = (state, action) =>{
         return {...state, user : payload}
   
       case SET_QUERY:
+        
         return {...state, query : payload}  
   
       case UPDATE_SEARCH:
